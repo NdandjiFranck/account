@@ -13,7 +13,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 		<db:my-sql-connection host="mudb.learn.mulesoft.com" port="3306" user="mule" password="mule" database="training" />
 	</db:config>
 	<flow name="postCustomer" doc:id="83a29a90-ff3c-43d0-a742-eb08fbf66cc8" >
-		<set-payload value='#["Message": "Customer add successful"]' doc:name="Set Payload" doc:id="a08c6c5e-9efe-458a-a23b-e77d02e7d927" />
+		<set-payload value='#["Message": "Customer add successful !!!"]' doc:name="Set Payload" doc:id="a08c6c5e-9efe-458a-a23b-e77d02e7d927" />
 		<ee:transform doc:name="Transform Message" doc:id="b6e3fa94-9054-46ad-b824-ae297a92237e" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
