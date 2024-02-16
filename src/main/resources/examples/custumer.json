@@ -1,0 +1,18 @@
+[
+ {
+    "ID": 1,
+    "name": "Franck",
+    "type": "business",
+    "address": "12345 Green St, Boulder, Colorado, 82433, USA",
+    "airMiles": 2,
+    "creationDate": "2017-07-26T12:30:00Z"
+  },
+  {
+    "ID": 2,
+    "name": "Ndandji",
+    "type": "personal",
+    "address": "53 rue de la republique, france",
+    "airMiles": 203,
+    "creationDate": "2017-07-24T14:30:00"  
+ }
+]
