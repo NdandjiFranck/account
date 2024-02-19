@@ -7,7 +7,7 @@ pipeline {
             steps {
                 script {
                 // Specify the full path to the Maven executable
-                def mavenHome = tool 'Maven 3.8'
+                def mavenHome = tool 'Maven 3.9'
                 def mavenExecutable = "${mavenHome}/bin/mvn"
 
                 echo "Maven home: ${mavenHome}"
@@ -26,7 +26,7 @@ pipeline {
             steps {
                 // Run tests for the MuleSoft project using the default Maven tool
                 script {
-                    def mavenHome = tool 'Maven 3.8'
+                    def mavenHome = tool 'Maven 3.9'
                     def mavenExecutable = "${mavenHome}/bin/mvn"
                     
                     bat "${mavenExecutable} clean package -nsu -DskipMunitTests"
@@ -37,7 +37,7 @@ pipeline {
         stage('Deploying to cloudhub') {
             steps {
                 script {
-                    def mavenHome = tool 'Maven 3.8'
+                    def mavenHome = tool 'Maven 3.9'
                     def mavenExecutable = "${mavenHome}/bin/mvn"
                     
                     bat "${mavenExecutable} clean deploy -DskipMunitTests -DmuleDeploy"
