@@ -127,13 +127,6 @@ output application/json
 		<flow-ref doc:name="geCustomerByID" doc:id="629443bb-da5b-44b8-86d2-eb35e76944a0" name="getCustomerByID"/>
     </flow>
     <flow name="post:\Customer:application\json:customer-accounts-api-config">
-        <ee:transform doc:name="Transform Message">
-            <ee:message>
-                <ee:set-payload><![CDATA[%dw 2.0
-output application/json
----
-"Accounts Created"]]></ee:set-payload>
-            </ee:message>
-        </ee:transform>
+		<flow-ref doc:name="postCustomer" doc:id="719fbcc1-d6d8-44f5-9181-f5d65f966b86" name="postCustomer"/>
     </flow>
 </mule>

@@ -1,0 +1,12 @@
+%dw 2.0
+
+type auto_83a29a90_ff3c_43d0_a742_eb08fbf66cc8_Input_Payload = {
+  address: String, 
+  airMiles: Number, 
+  name: String, 
+  ID?: Number, 
+  "type": String, 
+  creationDate: String, 
+  _?: Any
+}
+
