@@ -29,7 +29,7 @@ pipeline {
                     def mavenHome = tool 'Maven 3.8'
                     def mavenExecutable = "${mavenHome}/bin/mvn"
                     
-                    bat "${mavenExecutable} clean package -nsu -DskipMunitTests"
+                    bat "${mavenExecutable} clean test -nsu"
                 }
             }
         }
