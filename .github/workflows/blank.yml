@@ -1,0 +1,26 @@
+name: cicd account
+
+# Triggers the workflow on push or pull request events but only for the main branch
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+  
+jobs:
+  build:
+    # Build Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Install api-catalog cli
+        run: |
+          sudo apt-get update
+          npm install -g api-catalog-cli@latest
+      - name: Deploy to Cloud
+        env: 
+          ANYPOINT_USERNAME: FranckNdandji
+          ANYPOINT_PASSWORD: Franck237
+        run: |
+          mvn deploy -DmuleDeploy -Danypoint.username=FranckNdandji -Danypoint.password=Franck237
+
