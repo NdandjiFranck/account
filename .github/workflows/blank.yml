@@ -1,4 +1,4 @@
-name: cicd account
+name: CICD Example
 
 # Triggers the workflow on push or pull request events but only for the main branch
 on:
@@ -19,8 +19,7 @@ jobs:
           npm install -g api-catalog-cli@latest
       - name: Deploy to Cloud
         env: 
-          ANYPOINT_USERNAME: FranckNdandji
-          ANYPOINT_PASSWORD: Franck237
+          ANYPOINT_USERNAME: ${{ secrets.ANYPOINT_USERNAME }} 
+          ANYPOINT_PASSWORD: ${{ secrets.ANYPOINT_PASSWORD }}
         run: |
-          mvn deploy -DmuleDeploy -Danypoint.username=FranckNdandji -Danypoint.password=Franck237
-
+          mvn deploy -DmuleDeploy -Danypoint.username="$ANYPOINT_USERNAME" -Danypoint.password="$ANYPOINT_PASSWORD"
